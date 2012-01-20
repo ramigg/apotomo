@@ -244,7 +244,7 @@ module Apotomo
     end
     
     def url_for_event(type, options={})
-      ::Rails.env.production? ? '/internet' : '' + apotomo_event_path address_for_event(type, options) 
+      (::Rails.env.production? ? '/internet' : '') + apotomo_event_path address_for_event(type, options) 
     end
     
     alias_method :widget_id, :name
